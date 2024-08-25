@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      font-family: "chivo", system-ui, sans-serif;
+    }
+  }
+
+
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    20%, 80% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  .logo-container {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 3s linear infinite;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .group:hover .group-hover\:block {
+    display: block;
+  }
+  
+  .group:hover > ul {
+    display: block;
+  }
+  
+  .group > ul {
+    display: none;
+  }
+  
+  .group:hover > ul,
+  .group > ul:hover {
+    display: block;
+  }
+  
+  
